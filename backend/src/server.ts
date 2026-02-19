@@ -1,18 +1,10 @@
-import Fastify from "fastify";
+import Fastify from 'fastify'
+import {registerRoutes} from "./registerRoutes.js";
 
-const fastify = Fastify();
+export function createServer() {
+  const fastify = Fastify()
 
-// Define a route
-fastify.get('/', async (request, reply) => {
-  return { hello: 'world' };
-});
+  registerRoutes(fastify)
 
-export async function startServer() {
-  try {
-    await fastify.listen({ port: 3000, host: '0.0.0.0' });
-    console.log('Server running at http://localhost:3000');
-  } catch (err) {
-    fastify.log.error(err);
-    process.exit(1);
-  }
+  return fastify
 }
