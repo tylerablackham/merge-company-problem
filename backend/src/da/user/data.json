@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "firstName": "Emily",
+    "lastName": "Carter",
+    "companyId": 1
+  },
+  {
+    "id": 2,
+    "firstName": "Michael",
+    "lastName": "Reynolds",
+    "companyId": 1
+  },
+  {
+    "id": 3,
+    "firstName": "Sofia",
+    "lastName": "Martinez",
+    "companyId": 2
+  },
+  {
+    "id": 4,
+    "firstName": "Daniel",
+    "lastName": "Kim",
+    "companyId": 2
+  },
+  {
+    "id": 5,
+    "firstName": "Olivia",
+    "lastName": "Thompson",
+    "companyId": 3
+  },
+  {
+    "id": 6,
+    "firstName": "James",
+    "lastName": "Walker",
+    "companyId": 3
+  },
+  {
+    "id": 7,
+    "firstName": "Ava",
+    "lastName": "Peterson",
+    "companyId": 4
+  },
+  {
+    "id": 8,
+    "firstName": "Ethan",
+    "lastName": "Collins",
+    "companyId": 4
+  },
+  {
+    "id": 9,
+    "firstName": "Isabella",
+    "lastName": "Nguyen",
+    "companyId": 5
+  },
+  {
+    "id": 10,
+    "firstName": "Liam",
+    "lastName": "Hughes",
+    "companyId": 5
+  },
+  {
+    "id": 11,
+    "firstName": "Mia",
+    "lastName": "Brooks",
+    "companyId": 6
+  },
+  {
+    "id": 12,
+    "firstName": "Noah",
+    "lastName": "Sanders",
+    "companyId": 6
+  }
+]

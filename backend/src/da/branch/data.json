@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "name": "Head Office",
+    "companyId": 1
+  },
+  {
+    "id": 2,
+    "name": "Research & Development",
+    "companyId": 1
+  },
+  {
+    "id": 3,
+    "name": "West Coast Operations",
+    "companyId": 2
+  },
+  {
+    "id": 4,
+    "name": "Distribution Center",
+    "companyId": 2
+  },
+  {
+    "id": 5,
+    "name": "Main Clinic",
+    "companyId": 3
+  },
+  {
+    "id": 6,
+    "name": "Outpatient Services",
+    "companyId": 3
+  },
+  {
+    "id": 7,
+    "name": "Corporate HQ",
+    "companyId": 4
+  },
+  {
+    "id": 8,
+    "name": "Innovation Lab",
+    "companyId": 4
+  },
+  {
+    "id": 9,
+    "name": "Logistics Hub",
+    "companyId": 5
+  },
+  {
+    "id": 10,
+    "name": "Regional Office",
+    "companyId": 5
+  },
+  {
+    "id": 11,
+    "name": "Primary Care Center",
+    "companyId": 6
+  },
+  {
+    "id": 12,
+    "name": "Administrative Office",
+    "companyId": 6
+  }
+]

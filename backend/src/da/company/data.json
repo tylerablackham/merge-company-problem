@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "name": "Sumit Peak Technologies",
+    "address": {
+      "line1": "1234 Canyon Ridge Dr",
+      "line2": "Suite 200",
+      "city": "Provo",
+      "state": "UT",
+      "zip": "84604"
+    }
+  },
+  {
+    "id": 2,
+    "name": "Blue Horizon Logistics",
+    "address": {
+      "line1": "890 Harbor Blvd",
+      "line2": "",
+      "city": "Long Beach",
+      "state": "CA",
+      "zip": "90802"
+    }
+  },
+  {
+    "id": 3,
+    "name": "Maple Grove Health Solutions",
+    "address": {
+      "line1": "4567 Elm Street",
+      "line2": "Floor 3",
+      "city": "Boise",
+      "state": "ID",
+      "zip": "83702"
+    }
+  },
+  {
+    "id": 4,
+    "name": "Summit Peak Technology",
+    "address": {
+      "line1": "1234 Canyon Ridge Drive",
+      "line2": "Ste 200",
+      "city": "Provo",
+      "state": "UT",
+      "zip": "84604"
+    }
+  },
+  {
+    "id": 5,
+    "name": "Blue Horizon Logistic",
+    "address": {
+      "line1": "890 Harbor Boulevard",
+      "line2": "",
+      "city": "Long Beach",
+      "state": "CA",
+      "zip": "90802"
+    }
+  },
+  {
+    "id": 6,
+    "name": "Maple Grove Health Solutions",
+    "address": {
+      "line1": "4567 Elm Street",
+      "line2": "Floor 3",
+      "city": "Boise",
+      "state": "ID",
+      "zip": "83702"
+    }
+  }
+]
