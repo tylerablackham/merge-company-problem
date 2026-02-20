@@ -16,7 +16,7 @@ company entity. How might you architect your solution so that your code will be 
 | Hours | Work Done                                                                                                                             |
 |-------|---------------------------------------------------------------------------------------------------------------------------------------|
 | 0-2   | Set up backend infrastructure, including fastify route handler, and da methods. Generate dummy data. Write tests for da functionality |
-| 2-3   | Set up route handler and business logic for the two necessary endpoints: GET /company/:id and PUT /company/merge                      |
+| 2-3   | Set up route handler and business logic for the two necessary endpoints: `GET /company/:id` and `PUT /company/merge`                  |
 
 ## Architectural Decisions
 - Use Fastify for the backend framework
@@ -37,7 +37,7 @@ validate incoming requests.
 The approach I took was to let the frontend handle the actual conflicts in company data (more on that later), and let
 the backend handle the actual merging of the two companies. 
 
-The PUT /company/merge endpoint expects two company IDs as query parameters. These are the ids of the companies that
+The `PUT /company/merge` endpoint expects two company IDs as query parameters. These are the ids of the companies that
 will be merged. The first id will be kept and the second id will be deleted. The endpoint expects the body to contain
 the company data that will represent the "new" merged company.
 
