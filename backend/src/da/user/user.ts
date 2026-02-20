@@ -1,0 +1,28 @@
+import type {User} from "../types.js";
+import data from "./data.json" with { type: "json" }
+
+const users = new Map<number, User>()
+
+export function initUser() {
+  for (const u of data) {
+    users.set(u.id, u)
+  }
+  return {
+    getById,
+    getByCompanyId,
+    updateById
+  }
+}
+
+export function getById(id: number) {
+  return users.get(id) ?? null
+}
+
+export function getByCompanyId(companyId: number) {
+  return Array.from(users.values()).filter(u => u.companyId === companyId)
+}
+
+export function updateById(id: number, user: User) {
+  users.set(id, user)
+}
+
