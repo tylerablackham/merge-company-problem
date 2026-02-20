@@ -25,11 +25,14 @@ const MergeCompanyRequest = {
 export function registerMergeRoutes(fastify: FastifyTypebox, da: Da) {
   fastify.put('/merge/company', MergeCompanyRequest, async (request, reply) => {
     const { id1, id2 } = request.query;
+    // create the updated company
     const company: Company = {
       id: id1,
       ...request.body
     }
+    // update company
     da.company.updateById(id1, company)
+    // update users and branches connected to old company
     const users = da.user.getByCompanyId(id2)
     for (const user of users) {
       user.companyId = id1
@@ -40,8 +43,9 @@ export function registerMergeRoutes(fastify: FastifyTypebox, da: Da) {
       branch.companyId = id1
       da.branch.updateById(branch.id, branch)
     }
+    // delete old company
     da.company.deleteById(id2)
 
-    reply.send({ success: true, mergedCompany: da.company.getById(id1) })
+    reply.send({ success: true, mergedCompany: da.company.getById(id1) }).code(200)
   });
 }
