@@ -1,5 +1,5 @@
-import type {User} from "../types.js";
 import data from "./data.json" with { type: "json" }
+import {User} from "@merge-company-problem/shared";
 
 const users = new Map<number, User>()
 

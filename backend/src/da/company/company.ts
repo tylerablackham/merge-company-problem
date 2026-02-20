@@ -1,7 +1,7 @@
-import type {Company} from "../types.js";
 import data from "./data.json" with { type: "json" }
 import {deleteByCompanyId as deleteUserByCompanyId} from "../user/user.js"
 import {deleteByCompanyId as deleteBranchByCompanyId} from "../branch/branch.js"
+import {Company} from "@merge-company-problem/shared";
 
 const companies = new Map<number, Company>
 

@@ -1,5 +1,6 @@
-import type {Branch} from "../types.js";
+
 import data from "./data.json" with { type: "json" }
+import {Branch} from "@merge-company-problem/shared";
 
 
 const branches = new Map<number, Branch>()

@@ -1,0 +1,9 @@
+{
+  "private": true,
+  "name": "merge-company-problem",
+  "version": "0.0.0",
+  "workspaces": ["backend", "shared", "frontend"],
+  "scripts": {
+    "bootstrap": "npm install"
+  }
+}

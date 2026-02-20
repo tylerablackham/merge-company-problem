@@ -1,7 +1,7 @@
 import { Type } from "@sinclair/typebox";
 import {FastifyTypebox} from "../server.js";
-import {Company} from "../da/types.js";
 import {Da} from "../da/da.js";
+import {Company} from "@merge-company-problem/shared";
 
 export function registerCompanyRoutes(fastify: FastifyTypebox, da: Da) {
   fastify.get('/company/:id', GetCompanyRequest, async (request, reply) => {
