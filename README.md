@@ -17,6 +17,7 @@ company entity. How might you architect your solution so that your code will be 
 |-------|---------------------------------------------------------------------------------------------------------------------------------------|
 | 0-2   | Set up backend infrastructure, including fastify route handler, and da methods. Generate dummy data. Write tests for da functionality |
 | 2-3   | Set up route handler and business logic for the two necessary endpoints: `GET /company/:id` and `PUT /company/merge`                  |
+| 3-4   | Set up frontend infrastructure, shared type package, and api client for the frontend                                                  |
 
 ## Architectural Decisions
 - Use Fastify for the backend framework
@@ -32,6 +33,9 @@ ensure that my da methods were working correctly.
   - TypeBox integrates nicely with Fastify and is a great way to validate incoming requests. That way, I don't have to
 write any custom logic to validate the shape of incoming requests. I can just create a TypeBox schema and use that to
 validate incoming requests.
+- Use React for the frontend framework
+  - It is very easy to set up a React app by using Vite. Vite will create the whole project for you, which is very nice
+for me since this problem isn't focused on frontend design. I just wanted to get something up and running quickly.
 
 ## Backend Merging Logic
 The approach I took was to let the frontend handle the actual conflicts in company data (more on that later), and let
