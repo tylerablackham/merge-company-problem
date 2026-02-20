@@ -26,3 +26,13 @@ export function updateById(id: number, user: User) {
   users.set(id, user)
 }
 
+export function deleteById(id: number) {
+  users.delete(id)
+}
+
+export function deleteByCompanyId(companyId: number) {
+  for (const u of getByCompanyId(companyId)) {
+    deleteById(u.id)
+  }
+}
+

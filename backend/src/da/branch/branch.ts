@@ -26,3 +26,13 @@ export function getByCompanyId(companyId: number) {
 export function updateById(id: number, branch: Branch) {
   branches.set(id, branch)
 }
+
+export function deleteById(id: number) {
+  branches.delete(id)
+}
+
+export function deleteByCompanyId(companyId: number) {
+  for (const b of getByCompanyId(companyId)) {
+    deleteById(b.id)
+  }
+}

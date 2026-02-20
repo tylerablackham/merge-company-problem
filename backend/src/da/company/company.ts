@@ -1,5 +1,7 @@
 import type {Company} from "../types.js";
 import data from "./data.json" with { type: "json" }
+import {deleteByCompanyId as deleteUserByCompanyId} from "../user/user.js"
+import {deleteByCompanyId as deleteBranchByCompanyId} from "../branch/branch.js"
 
 const companies = new Map<number, Company>
 
@@ -24,5 +26,7 @@ export function updateById(id: number, company: Company) {
 
 export function deleteById(id: number) {
   companies.delete(id)
+  deleteUserByCompanyId(id)
+  deleteBranchByCompanyId(id)
 }
 

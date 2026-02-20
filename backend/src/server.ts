@@ -1,6 +1,6 @@
 import Fastify from "fastify";
 import {registerRoutes} from "./registerRoutes.js";
-import {initDa} from "./da/init.js";
+import {initDa} from "./da/da.js";
 
 export function createServer() {
   const fastify = Fastify()
