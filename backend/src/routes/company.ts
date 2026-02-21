@@ -1,7 +1,7 @@
 import { Type } from "@sinclair/typebox";
 import {FastifyTypebox} from "../server.js";
 import {Da} from "../da/da.js";
-import {Company} from "@merge-company-problem/shared";
+import {Company, CompanyResponse} from "@merge-company-problem/shared";
 
 export function registerCompanyRoutes(fastify: FastifyTypebox, da: Da) {
   fastify.get('/company/:id', GetCompanyRequest, async (request, reply) => {
@@ -12,7 +12,8 @@ export function registerCompanyRoutes(fastify: FastifyTypebox, da: Da) {
     }
     const users = da.user.getByCompanyId(company.id)
     const branches = da.branch.getByCompanyId(company.id)
-    reply.send({ success: true, company, users, branches}).code(200)
+    const response: CompanyResponse = { success: true, company, users, branches }
+    reply.send(response).code(200)
   })
 
   fastify.put('/company/merge', MergeCompanyRequest, async (request, reply) => {
@@ -40,7 +41,13 @@ export function registerCompanyRoutes(fastify: FastifyTypebox, da: Da) {
 
     const users = da.user.getByCompanyId(id1)
     const branches = da.branch.getByCompanyId(id1)
-    reply.send({ success: true, mergedCompany: da.company.getById(id1), users, branches }).code(200)
+    const mergedCompany = da.company.getById(id1)
+    if (!mergedCompany) {
+      reply.send({ success: false, message: 'error merging company' }).code(500)
+      return
+    }
+    const response: CompanyResponse = { success: true, company: mergedCompany, users, branches }
+    reply.send(response).code(200)
   });
 }
 

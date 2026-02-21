@@ -1,4 +1,5 @@
 import type {Company, User, Branch} from "@merge-company-problem/shared";
+import './CompanyInfo.css'
 
 interface CompanyInfoProps {
   company: Company | null

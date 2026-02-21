@@ -24,3 +24,10 @@ export type Branch = {
   name: string
   companyId: number
 }
+
+export type CompanyResponse = {
+  success: boolean
+  company: Company
+  users: User[]
+  branches: Branch[]
+}

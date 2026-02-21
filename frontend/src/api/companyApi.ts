@@ -1,12 +1,5 @@
 import { apiFetch } from "./client";
-import type {Branch, Company, User} from "@merge-company-problem/shared";
-
-type CompanyResponse = {
-  success: boolean
-  company: Company
-  users: User[]
-  branches: Branch[]
-}
+import type {Company, CompanyResponse} from "@merge-company-problem/shared";
 
 export async function getCompany(id: number): Promise<CompanyResponse> {
   return apiFetch<CompanyResponse>(`/company/${id}`)

@@ -4,6 +4,7 @@
     padding: 12px;
     box-sizing: border-box;
     background: #fff;
+    color: #1a1a1a;
     /* let the parent grid decide sizing */
 }
 
@@ -20,16 +21,19 @@
     font-weight: 600;
     margin-bottom: 6px;
     font-size: 0.95rem;
+    text-align: left;
 }
 
 .cc-address div {
     line-height: 1.25;
+    text-align: left;
 }
 
 .cc-list {
     margin: 0;
     padding-left: 18px;
     line-height: 1.4;
+    text-align: left;
 }
 
 .cc-empty {
