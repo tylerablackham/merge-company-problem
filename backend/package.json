@@ -18,8 +18,9 @@
     "typescript": "^5.9.3"
   },
   "dependencies": {
-    "@merge-company-problem/shared": "file:../shared",
+    "@fastify/cors": "^11.2.0",
     "@fastify/type-provider-typebox": "^6.1.0",
+    "@merge-company-problem/shared": "file:../shared",
     "@sinclair/typebox": "^0.34.48",
     "fastify": "^5.7.4"
   }
