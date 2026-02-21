@@ -1,0 +1,38 @@
+.cc-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 12px;
+    box-sizing: border-box;
+    background: #fff;
+    /* let the parent grid decide sizing */
+}
+
+.cc-title {
+    margin: 0 0 8px 0;
+    font-size: 1.1rem;
+}
+
+.cc-section {
+    margin-bottom: 10px;
+}
+
+.cc-section-title {
+    font-weight: 600;
+    margin-bottom: 6px;
+    font-size: 0.95rem;
+}
+
+.cc-address div {
+    line-height: 1.25;
+}
+
+.cc-list {
+    margin: 0;
+    padding-left: 18px;
+    line-height: 1.4;
+}
+
+.cc-empty {
+    color: #666;
+    font-size: 0.95rem;
+}

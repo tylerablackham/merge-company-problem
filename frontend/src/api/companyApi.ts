@@ -8,11 +8,11 @@ type CompanyResponse = {
   branches: Branch[]
 }
 
-export async function getCompany(id: string): Promise<CompanyResponse> {
+export async function getCompany(id: number): Promise<CompanyResponse> {
   return apiFetch<CompanyResponse>(`/company/${id}`)
 }
 
-export async function mergeCompanies(id1: string, id2: string, info: Company): Promise<CompanyResponse> {
+export async function mergeCompanies(id1: number, id2: number, info: Company): Promise<CompanyResponse> {
   return apiFetch<CompanyResponse>(`/company/merge?id1=${id1}&id2=${id2}`, {
     method: 'PUT',
     body: JSON.stringify(info)

@@ -1,0 +1,93 @@
+/* Minimal layout + small affordances for CompanyMerge */
+
+/* root container centers content and limits width */
+.cm-root {
+    max-width: 1000px;
+    margin: 16px auto;
+    padding: 8px;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+/* top title */
+.cm-title {
+    margin: 0 0 12px 0;
+    font-size: 1.25rem;
+}
+
+/* controls row — keep inputs and button inline */
+.cm-controls {
+    display: flex;
+    gap: 10px;
+    align-items: end;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+}
+
+/* each label/input pair */
+.cm-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+/* small label */
+.cm-label {
+    font-size: 0.85rem;
+}
+
+/* basic input sizing so layout is consistent */
+.cm-input {
+    width: 140px;
+    padding: 6px 8px;
+    font-size: 0.95rem;
+    box-sizing: border-box;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+/* simple primary button */
+.cm-button {
+    padding: 8px 12px;
+    font-size: 0.95rem;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    background: #0366d6;
+    color: white;
+}
+
+/* error message */
+.cm-error {
+    color: #a33;
+    margin-bottom: 10px;
+}
+
+/* grid: two columns, stack on narrow screens */
+.cm-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    align-items: start;
+}
+
+/* column title above each card */
+.cm-col-title {
+    margin: 0 0 8px 0;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+/* placeholder card when loading */
+.cm-placeholder {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 12px;
+}
+
+/* responsive fallback: single column on narrow widths */
+@media (max-width: 720px) {
+    .cm-grid {
+        grid-template-columns: 1fr;
+    }
+}
