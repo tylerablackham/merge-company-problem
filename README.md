@@ -11,6 +11,13 @@ and Branches so that they are associated with the correct, resulting company fro
 Suppose that a few months down the road, a different team member needs to add a Credit Limit (an integer) to the
 company entity. How might you architect your solution so that your code will be maintained?
 
+## How to Run
+1. Clone the repo
+2. Run `npm run bootstrap` in the root directory
+3. Run `npm run build` in the root directory
+4. Run `npm run dev:backend` in the root directory to start the backend server
+5. Run `npm run dev:frontend` in the root directory to start the frontend web app
+
 ## Time Log
 
 | Hours | Work Done                                                                                                                             |
@@ -18,6 +25,7 @@ company entity. How might you architect your solution so that your code will be 
 | 0-2   | Set up backend infrastructure, including fastify route handler, and da methods. Generate dummy data. Write tests for da functionality |
 | 2-3   | Set up route handler and business logic for the two necessary endpoints: `GET /company/:id` and `PUT /company/merge`                  |
 | 3-4   | Set up frontend infrastructure, shared type package, and api client for the frontend                                                  |
+| 4-6   | Set up react components and frontend merge conflict resolution workflow                                                               |
 
 ## Architectural Decisions
 - Use Fastify for the backend framework
@@ -52,11 +60,22 @@ if all goes well, the handler returns a 200 response with all the associated dat
 
 ## Frontend Conflict Resolution Logic
 As I stated earlier, the frontend is responsible for handling the conflicts between the two companies that you want to
-merge. The way I handled this was by allowing the user to submit two ids for the companies they want to merge. 
-![s1.png](public/s1.png)
+merge. The way I handled this was by allowing the user to submit two ids for the companies they want to merge.
+
+<img src="public/s1.png" width="40%"/>
+
 Then the frontend would display the data for each company after making the necessary API calls to get the data. The user 
-is then expected to fill out the necessary fields for the company to be merged. 
-![s2.png](public/s2.png)
+is then expected to fill out the necessary fields for the company to be merged.
+
+<img src="public/s2.png" width="40%"/>
+
 When the user fills out all the fields and clicks the merge button, the frontend will make a PUT request to the backend 
 to merge the two companies. The frontend will then display the new, merged company data.
-![s3.png](public/s3.png)
+
+<img src="public/s3.png" width="40%"/>
+
+## Handling the Addition of a Credit Limit to the Company Entity
+The types for all the entities in the database are defined in the [shared](./shared/src/company.ts) package. If I were 
+to add the new field to this type and run the build commands, both the frontend and backend will fail to compile because
+the code is not handling the new field. This allows me to know that I need to update the frontend and backend logic 
+before this addition gets pushed to production.
