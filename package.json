@@ -2,8 +2,11 @@
   "private": true,
   "name": "merge-company-problem",
   "version": "0.0.0",
-  "workspaces": ["backend", "shared", "frontend"],
+  "workspaces": ["shared", "backend", "frontend"],
   "scripts": {
-    "bootstrap": "npm install"
+    "bootstrap": "npm install",
+    "build" : "npm run build --workspaces",
+    "dev:backend": "npm run dev --workspace=backend",
+    "dev:frontend": "npm run dev --workspace=frontend"
   }
 }
