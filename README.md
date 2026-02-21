@@ -49,3 +49,14 @@ The route handler first updates the company data for the first company id to mat
 all users and branches associated with the second company id so that they are connected to the first company id. This 
 ensures that no users or branches are orphaned after deleting the second company. The second company is then deleted and,
 if all goes well, the handler returns a 200 response with all the associated data for the merged company. 
+
+## Frontend Conflict Resolution Logic
+As I stated earlier, the frontend is responsible for handling the conflicts between the two companies that you want to
+merge. The way I handled this was by allowing the user to submit two ids for the companies they want to merge. 
+![s1.png](public/s1.png)
+Then the frontend would display the data for each company after making the necessary API calls to get the data. The user 
+is then expected to fill out the necessary fields for the company to be merged. 
+![s2.png](public/s2.png)
+When the user fills out all the fields and clicks the merge button, the frontend will make a PUT request to the backend 
+to merge the two companies. The frontend will then display the new, merged company data.
+![s3.png](public/s3.png)
