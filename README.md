@@ -14,9 +14,13 @@ company entity. How might you architect your solution so that your code will be 
 ## How to Run
 1. Clone the repo
 2. Run `npm run bootstrap` in the root directory
-3. Run `npm run build` in the root directory
+3. Run `npm run build` in the root directory. If you make any changes to the shared types, you will need to run this command again.
 4. Run `npm run dev:backend` in the root directory to start the backend server
 5. Run `npm run dev:frontend` in the root directory to start the frontend web app
+
+## Testing
+Only the backend has unit tests. The frontend must be tested manually.
+1. Run `npm run test` in the root directory to run all the tests in the project
 
 ## Time Log
 
@@ -26,6 +30,7 @@ company entity. How might you architect your solution so that your code will be 
 | 2-3   | Set up route handler and business logic for the two necessary endpoints: `GET /company/:id` and `PUT /company/merge`                  |
 | 3-4   | Set up frontend infrastructure, shared type package, and api client for the frontend                                                  |
 | 4-6   | Set up react components and frontend merge conflict resolution workflow                                                               |
+| 6-7   | Add unit tests for backend functionality                                                                                              |
 
 ## Architectural Decisions
 - Use Fastify for the backend framework
@@ -79,3 +84,13 @@ The types for all the entities in the database are defined in the [shared](./sha
 to add the new field to this type and run the build commands, both the frontend and backend will fail to compile because
 the code is not handling the new field. This allows me to know that I need to update the frontend and backend logic 
 before this addition gets pushed to production.
+
+## Note on AI Use
+While I did use AI for some code generation, none of the code generated was relevant to the actual business logic of the
+problem. I primarily used it for help generating the HTML and CSS for the frontend. I also used it for help architecting
+the repository, such as setting up the Vite-React project, setting up the shared types package, generating dummy data,
+and importing necessary dependencies.
+
+I felt justified by this decision because all logic related to the actual problem was a product of my own 
+creativity and thought process. All the da methods, route handlers, business logic (both frontend and backend), and unit 
+tests were designed exclusively by me.

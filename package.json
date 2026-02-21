@@ -7,6 +7,7 @@
     "bootstrap": "npm install",
     "build" : "npm run build --workspaces",
     "dev:backend": "npm run dev --workspace=backend",
-    "dev:frontend": "npm run dev --workspace=frontend"
+    "dev:frontend": "npm run dev --workspace=frontend",
+    "test": "npm run test --workspaces --if-present"
   }
 }
