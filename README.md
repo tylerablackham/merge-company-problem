@@ -1,7 +1,5 @@
 # merge-company-problem
 
-## Tyler Blackham
-
 ## Description of the Scenario
 The scenario is you have two companies in a database (one is a duplicated of the other, entered erroneously by an
 employee).
